@@ -3,7 +3,7 @@
 # Ensure the script is run as superuser
 if [ "$EUID" -ne 0 ]; then
   echo "Please run as superuser"
-  exit
+  exit 1
 fi
 
 # Create the new font
@@ -43,8 +43,12 @@ fi
 # Add custom colors
 echo "Configuring custom colors in /etc/grub.d/05_debian_theme..."
 GRUB_THEME_FILE="/etc/grub.d/05_debian_theme"
+
+# Set menu colors
 sed -i "/^set menu_color_normal=/c\set menu_color_normal=light-green/black" $GRUB_THEME_FILE
 sed -i "/^set menu_color_highlight=/c\set menu_color_highlight=green/black" $GRUB_THEME_FILE
+
+# Set terminal box colors
 sed -i "/^set color_normal=/c\set color_normal=red/black" $GRUB_THEME_FILE
 sed -i "/^set color_highlight=/c\set color_highlight=red/black" $GRUB_THEME_FILE
 
