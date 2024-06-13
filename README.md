@@ -17,7 +17,7 @@ The `customize_grub.sh` script modifies your GRUB configuration to:
 
     ```sh
     cd ~
-    wget https://raw.githubusercontent.com/your-username/grub-customization/main/customize_grub.sh
+    wget https://raw.githubusercontent.com/jose-litium/grub-customization/main/customize_grub.sh
     ```
 
 2. **Make the Script Executable**
@@ -48,7 +48,7 @@ The `customize_grub.sh` script modifies your GRUB configuration to:
 
 ```sh
 cd ~
-wget https://raw.githubusercontent.com/your-username/grub-customization/main/customize_grub.sh
+wget https://raw.githubusercontent.com/jose-litium/grub-customization/main/customize_grub.sh
 sudo chmod +x customize_grub.sh
 sudo ./customize_grub.sh
 sudo reboot
